@@ -13,8 +13,8 @@ from DisplayData import displayData
 print ('Loading Data')
 print ('\n')
 data = loadmat('Data/Data.mat')
-#X is a 5000 * 400 matrix containing training 5000, 20x20 training examples that have been manipulated to into single rows 400 elements long
-#Y is a 
+#X is a matrix containing Training Data
+#Y is a matrix containing Training Labels
 X = data['X']
 y = data['y']
 
