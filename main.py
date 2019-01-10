@@ -1,3 +1,6 @@
+import sys 
+sys.path.append('Scripts')
+sys.path.append('Data')
 import numpy as np
 from scipy.io import loadmat
 from sklearn.preprocessing import OneHotEncoder
@@ -5,14 +8,21 @@ from scipy.optimize import minimize
 from ForwardPropagate import forwardPropagate
 from BackPropagation import backprop
 from SplitData import splitData
+from DisplayData import displayData
 
 print ('Loading Data')
 print ('\n')
-data = loadmat('Data.mat')
+data = loadmat('Data/Data.mat')
 #X is a 5000 * 400 matrix containing training 5000, 20x20 training examples that have been manipulated to into single rows 400 elements long
 #Y is a 
 X = data['X']
 y = data['y']
+
+print('Displaying 100 Random Images')
+
+rand_indices = np.random.permutation(range(X.shape[0]))
+sel = X[rand_indices[0:100], :]
+displayData(sel)
 
 print ('Seperating Data into Test and Training Sets')
 print('\n')
