@@ -4,10 +4,12 @@ This project uses a 3 layer Neural Network along with back propagation to addres
 
 
 The architecture of the Neural Network used in this project.
+![image](https://user-images.githubusercontent.com/32972284/50938746-9d8ce180-1447-11e9-940b-aa607e9d216c.png)
 
 
 
 
 
 The formula for the regularized cost function used for back propagation
+![image](https://user-images.githubusercontent.com/32972284/50938786-cad98f80-1447-11e9-8321-772c2be46f41.png)
 
