@@ -9,6 +9,10 @@ from ForwardPropagate import forwardPropagate
 from BackPropagation import backprop
 from SplitData import splitData
 from DisplayData import displayData
+from visualizePredictions import visualizePredictions
+
+
+
 
 print ('Loading Data')
 print ('\n')
@@ -60,7 +64,7 @@ fmin = minimize(fun=backprop, x0=params, args=(input_size, hidden_size, num_labe
 theta1 = np.matrix(np.reshape(fmin.x[:hidden_size * (input_size + 1)], (hidden_size, (input_size + 1))))
 theta2 = np.matrix(np.reshape(fmin.x[hidden_size * (input_size + 1):], (num_labels, (hidden_size + 1))))
 
-print('Using Learned Parameters to Predict Numbers')
+print('Using Learned and Optimized Parameters to Predict Numbers')
 print ('\n')
 
 a1, z2, a2, z3, h = forwardPropagate(X_train, theta1, theta2)
@@ -77,3 +81,8 @@ test_pred = np.array(np.argmax(h, axis=1) + 1)
 correct = [1 if a == b else 0 for (a, b) in zip(test_pred, Y_test)]
 accuracy = (sum(map(int, correct)) / float(len(correct)))
 print ('Test Set Accuracy = {0} %'.format(accuracy * 100))
+
+print ('Displaying Neural Network Predictions for 10 Sample Images')
+
+visualizePredictions(X_test,test_pred)
+
