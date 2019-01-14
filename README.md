@@ -14,3 +14,8 @@ A sample of 100 random images pulled from the dataset
 <p align="center">
   <img width="460" height="300" src="https://user-images.githubusercontent.com/32972284/50940630-ae415580-144f-11e9-81b7-40e6902cff0e.png">
 </p>
+
+A sample of 3 predictions after the Neural Network has run and learnt optimal parameters.
+<p align ="center">
+  <img width="301" height="805" src="https://user-images.githubusercontent.com/32972284/51093910-2b353d80-1776-11e9-9bc4-ea5784ede6dd.png">
+</p>
