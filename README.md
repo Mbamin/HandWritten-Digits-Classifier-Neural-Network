@@ -1,4 +1,4 @@
-# HandWritten Digits Classifier Neural-Network
+# Handwritten Digits Classifier Neural-Network
 Can a Neural Network be used to accurately classify handwritten digits?
 This project uses a 3 layer Neural Network along with back propagation to address the aforementioned problem. It works by observing the greyscale intensity values of various digits and using gradient descent along with logistic regression to learn what each digit looks like. This project was trained and tested on a subset of the MNIST data set, (5000 images) and is ~ 96% accurate. This project was inspired by an assignment from a Machine Learning course from Stanford.
 
